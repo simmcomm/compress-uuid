@@ -1,0 +1,40 @@
+{
+  "name": "@simmcomm/compress-uuid",
+  "version": "1.0.0",
+  "description": "UUID compress/decompress util",
+  "main": "dist/index.js",
+  "author": "ivanpepelko <ivan.pepelko@gmail.com>",
+  "maintainers": [
+    "ivanpepelko <ivan.pepelko@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simmcomm/compress-uuid.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"],
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "rm -rf dist && npm run build"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "any-base": "^1.1.0",
+    "uuid": "^11.1.0"
+  }
+}

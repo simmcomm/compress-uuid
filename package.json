@@ -22,7 +22,7 @@
   "files": ["dist"],
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
     "build": "tsc",
     "prepublishOnly": "rm -rf dist && npm run build"
   },

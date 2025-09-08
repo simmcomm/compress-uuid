@@ -14,6 +14,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: |
-          NODE_OPTIONS="$NODE_OPTIONS --experimental-vm-modules" npx jest --coverage --no-color 2>&1 | tee $GITHUB_STEP_SUMMARY
+          npm run test -- --coverage --no-color 2>&1 | tee $GITHUB_STEP_SUMMARY
           exit_code=${PIPESTATUS[0]}
           exit $exit_code

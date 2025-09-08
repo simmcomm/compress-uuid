@@ -13,4 +13,7 @@ jobs:
           check-latest: true
           cache: npm
       - run: npm ci
-      - run: npx jest --coverage --no-color 2>&1 | tee $GITHUB_STEP_SUMMARY
+      - run: |
+          npx jest --coverage --no-color 2>&1 | tee $GITHUB_STEP_SUMMARY
+          exit_code=${PIPESTATUS[0]}
+          exit $exit_code

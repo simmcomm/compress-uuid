@@ -1,0 +1,10 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule: "weekly"
+    versioning-strategy: "widen"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule: "weekly"

@@ -1,11 +1,14 @@
 {
   "name": "@simmcomm/compress-uuid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UUID compress/decompress util",
   "main": "dist/index.js",
   "author": "ivanpepelko <ivan.pepelko@gmail.com>",
   "maintainers": [
-    "ivanpepelko <ivan.pepelko@gmail.com>"
+    {
+      "name": "ivanpepelko",
+      "email": "ivan.pepelko@gmail.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -19,7 +22,14 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/simmcomm/compress-uuid/issues"
+  },
+  "homepage": "https://github.com/simmcomm/compress-uuid#readme",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",

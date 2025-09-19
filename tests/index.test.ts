@@ -1,4 +1,5 @@
-import { CHARSETS, compressUuid, decompressUuid } from './index';
+import { describe, expect, test } from 'vitest';
+import { CHARSETS, compressUuid, decompressUuid } from '../src';
 
 type TestCase<T extends (...args: any) => any> = [...Parameters<T>, ReturnType<T>, string | undefined];
 

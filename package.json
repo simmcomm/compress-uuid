@@ -2,46 +2,44 @@
   "name": "@simmcomm/compress-uuid",
   "version": "1.0.1",
   "description": "UUID compress/decompress util",
-  "main": "dist/index.js",
-  "author": "ivanpepelko <ivan.pepelko@gmail.com>",
-  "maintainers": [
-    {
-      "name": "ivanpepelko",
-      "email": "ivan.pepelko@gmail.com"
-    }
-  ],
+  "type": "module",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/simmcomm/compress-uuid#readme",
+  "bugs": {
+    "url": "https://github.com/simmcomm/compress-uuid/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simmcomm/compress-uuid.git"
   },
+  "author": "ivanpepelko <ivan.pepelko@gmail.com>",
+  "files": [
+    "upgrade/dist"
+  ],
+  "main": "upgrade/dist/index.js",
+  "module": "upgrade/dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    },
+    ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
-  "types": "./dist/index.d.ts",
-  "bugs": {
-    "url": "https://github.com/simmcomm/compress-uuid/issues"
+  "publishConfig": {
+    "access": "public"
   },
-  "homepage": "https://github.com/simmcomm/compress-uuid#readme",
-  "files": [
-    "dist"
-  ],
-  "type": "module",
   "scripts": {
-    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
-    "build": "tsc",
-    "prepublishOnly": "rm -rf dist && npm run build"
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && npm publish"
   },
-  "license": "UNLICENSED",
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "jest": "^30.0.0",
-    "ts-jest": "^29.0.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^22.15.17",
+    "@vitest/coverage-v8": "^4.0.0-beta",
+    "bumpp": "^10.1.0",
+    "tsdown": "^0.11.9",
+    "typescript": "^5.8.3",
+    "vitest": "^4.0.0-beta"
   },
   "dependencies": {
     "any-base": "^1.1.0",

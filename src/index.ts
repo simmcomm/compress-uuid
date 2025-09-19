@@ -26,7 +26,7 @@ export function decompressUuid(compressed: string, variant: keyof typeof CHARSET
   ].join('-');
 
   const input = variant === 'base36' ? compressed.toLowerCase() : compressed;
-  const uuid = addUuidDashes(anyBase(CHARSETS[variant], anyBase.HEX)(input));
+  const uuid = addUuidDashes(anyBase(CHARSETS[variant], anyBase.HEX)(input).padStart(32, '0'));
   if (!isUUID(uuid)) {
     throw new Error('decompressUuid: could not decompress uuid');
   }

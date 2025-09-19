@@ -31,6 +31,7 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
+    "prepublish": "npm run build",
     "release": "bumpp && npm publish"
   },
   "devDependencies": {

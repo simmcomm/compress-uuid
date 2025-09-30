@@ -45,7 +45,6 @@
     "vitest": "^4.0.0-beta"
   },
   "dependencies": {
-    "any-base": "^1.1.0",
-    "uuid": "^13.0.0"
+    "any-base": "^1.1.0"
   }
 }

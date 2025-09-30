@@ -1,5 +1,5 @@
 import anyBase from 'any-base';
-import { validate as validateUuid, version as uuidVersion } from 'uuid';
+import { validate as validateUuid, version as uuidVersion } from './uuid';
 
 const isUUID = (u: string) => validateUuid(u) && uuidVersion(u) === 4;
 

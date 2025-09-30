@@ -37,10 +37,10 @@
     "release": "bumpp && npm run build && npm publish"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
+    "@types/node": "^24.6.0",
     "@vitest/coverage-v8": "^4.0.0-beta",
     "bumpp": "^10.1.0",
-    "tsdown": "^0.11.9",
+    "tsdown": "^0.15.5",
     "typescript": "^5.8.3",
     "vitest": "^4.0.0-beta"
   },
